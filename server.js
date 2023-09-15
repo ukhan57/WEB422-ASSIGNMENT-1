@@ -44,8 +44,26 @@ app.post("/api/companies", (req,res) => {
     res.status(201).json(db.addNewCompany(req.body));
 })
 
-// GET 
-
+// GET all companies with optional pagination and tag filtering
+app.get("/api/companies", (req, res) => {
+    const page = parseInt(req.query.page);
+    const perPage = parseInt(req.query.perPage);
+    const tag = req.query.tag ? req.query.tag.toLowerCase() : null; // Converting tag to lowercase for case-insensitive matching
+  
+    if (!Number.isInteger(page) || !Number.isInteger(perPage) || page <= 0 || perPage <= 0) {
+      return res.status(400).json({ error: 'Invalid page or perPage parameters' });
+    }
+  
+    db.getAllCompanies(page, perPage, tag)
+      .then((companies) => {
+        res.json(companies);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(500).json({"message": "Server internal error"});
+      });
+  });
+  
 
 // Get One
 app.get("/api/company/:name", (req,res) => {
