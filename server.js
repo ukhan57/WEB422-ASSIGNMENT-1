@@ -1,7 +1,9 @@
 /**********************************************************************************
  *  WEB422 – Assignment 1*
  *  I declare that this assignment is my own work in accordance with Seneca Academic Policy. *
- *  No part of this assignment has been copied manually or electronically from any other source* (including web sites) or distributed to other students.*
+ *  No part of this assignment has been copied manually or electronically from any other source*
+ *  (including web sites) or distributed to other students.*
+ * 
  *  Name: Umar Khan
  *  Student ID: 145270211
  *  Date: 09/14/2023 *
