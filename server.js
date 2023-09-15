@@ -51,7 +51,7 @@ app.get("/api/companies", (req, res) => {
     const tag = req.query.tag ? req.query.tag.toLowerCase() : null; // Converting tag to lowercase for case-insensitive matching
   
     if (!Number.isInteger(page) || !Number.isInteger(perPage) || page <= 0 || perPage <= 0) {
-      return res.status(400).json({ error: 'Invalid page or perPage parameters' });
+      return res.status(400).json({ error: "Invalid page or perPage" });
     }
   
     db.getAllCompanies(page, perPage, tag)
