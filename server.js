@@ -45,7 +45,7 @@ app.post("/api/companies", (req,res) => {
     res.status(201).json(db.addNewCompany(req.body));
 })
 
-// GET all companies with optional pagination and tag filtering
+// GET all
 app.get("/api/companies", (req, res) => {
     const page = parseInt(req.query.page);
     const perPage = parseInt(req.query.perPage);
@@ -69,7 +69,7 @@ app.get("/api/companies", (req, res) => {
 // Get One
 app.get("/api/company/:name", (req,res) => {
     db.getCompanyByName(req.params.name)
-    .then((emp)=> {
+    .then((emp) => {
         emp ? res.json(emp) : res.status(404).json({"message": "Resource not found!"});
     })
     .catch((err) => {
@@ -78,7 +78,7 @@ app.get("/api/company/:name", (req,res) => {
 });
 
 // PUT - Edit existing
-app.put("/api/company/:name", (req,res) =>{
+app.put("/api/company/:name", (req,res) => {
     if(req.body.id && req.params.name != req.body.id){
         res.status(400).json({"message": "Names do not match"});
     }
@@ -95,7 +95,7 @@ app.delete("/api/company/:name", (req,res) => {
 });
 
 // Initializing the Module before the server starts to ensure that we can indeed connect to the mongoDB Atlas Cluster
-db.initialize(process.env.MONGODB_CONN_STRING).then(()=>{
+db.initialize(process.env.MONGODB_CONN_STRING).then(() => {
    app.listen(HTTP_PORT, () => {
     console.log(`Listening on port ${HTTP_PORT}`);
    });
