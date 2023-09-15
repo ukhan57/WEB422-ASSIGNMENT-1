@@ -6,7 +6,7 @@
  * 
  *  Name: Umar Khan
  *  Student ID: 145270211
- *  Date: 09/14/2023 *
+ *  Date: 09/14/2023
  *  Cyclic Link: https://gentle-bat-sandals.cyclic.cloud/
  * *********************************************************************************/
 
@@ -16,7 +16,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 const cors = require("cors");
-const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const HTTP_PORT = process.env.PORT || 3000;
 // I would like to use port 3000
