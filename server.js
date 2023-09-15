@@ -20,9 +20,6 @@ const dotenv = require("dotenv").config();
 const HTTP_PORT = process.env.PORT || 3000;
 // I would like to use port 3000
 
-//Testing
-let MONGODB_CONN_STRING= 'mongodb+srv://ukhan57:XaFfpQibJ9KNjdCn@senecaweb.phkxucn.mongodb.net/sample_training';
-
 // Add support for incoming JSON entities
 app.use(bodyParser.json());
 
