@@ -17,8 +17,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const cors = require("cors");
 const dotenv = require("dotenv").config();
-const HTTP_PORT = process.env.PORT || 3000;
-// I would like to use port 3000
+const HTTP_PORT = process.env.PORT || 80;
+// I would like to use port 80
 
 // Add support for incoming JSON entities
 app.use(bodyParser.json());
