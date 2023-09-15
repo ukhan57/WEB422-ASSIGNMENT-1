@@ -16,8 +16,8 @@ const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
-const HTTP_PORT = process.env.PORT || 80;
-// I would like to use port 80
+const HTTP_PORT = process.env.PORT || 500;
+// I would like to use port 500
 
 // Add support for incoming JSON entities
 app.use(bodyParser.json());
@@ -35,7 +35,7 @@ const db = new CompaniesDB();
 
 // Deliver the app's home page to browser clients
 app.get("/", (req,res) => {
-    res.sendFile(path.join(__dirname, "/index.html"));
+    res.json({"message": "API Listening"})
   });
 
 // Add new
