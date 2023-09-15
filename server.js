@@ -34,7 +34,7 @@ app.use(cors());
 const CompaniesDB = require("./modules/companiesDB.js");
 const db = new CompaniesDB();
 
-// Deliver the app's home page to browser clients
+// Ensuring the environment is correct and able to run/test the server locally.
 app.get("/", (req,res) => {
     res.json({"message": "API Listening"})
   });
