@@ -7,7 +7,7 @@
  *  Name: Umar Khan
  *  Student ID: 145270211
  *  Date: 09/14/2023
- *  Cyclic Link: https://gentle-bat-sandals.cyclic.cloud/
+ *  Cyclic Link: https://tiny-cyan-bison-tutu.cyclic.app/
  * *********************************************************************************/
 
 // Setup
