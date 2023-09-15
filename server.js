@@ -95,9 +95,9 @@ app.delete("/api/company/:name", (req,res) => {
 
 // Initializing the Module before the server starts to ensure that we can indeed connect to the mongoDB Atlas Cluster
 db.initialize(process.env.MONGODB_CONN_STRING).then(()=>{
-    app.listen(HTTP_PORT, ()=>{
-        console.log(`server listening on: ${HTTP_PORT}`);
-    });
-    }).catch((err)=>{
-        console.log(err);
+   app.listen(HTTP_PORT, () => {
+    console.log(`Listening on port ${HTTP_PORT}`);
+   });
+}).catch((err) => {
+    console.log(err);
 });
