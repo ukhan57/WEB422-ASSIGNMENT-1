@@ -16,8 +16,8 @@ const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
-const HTTP_PORT = process.env.PORT || 8080;
-// I would like to use port 8080
+const HTTP_PORT = process.env.PORT || 5000;
+// I would like to use port 5000
 
 // Add support for incoming JSON entities
 app.use(bodyParser.json());
